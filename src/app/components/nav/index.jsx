@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { Link as Anchor } from 'react-router-dom';
 import { Fade } from 'react-awesome-reveal';
-
-import config from '../../../config.json';
 
 function Navigation () {
 
@@ -26,7 +23,11 @@ function Navigation () {
               activeClass = 'active'>Works</Link>
           </li>
           <li>
-            <Anchor to = { config.routes.blog }>Blog</Anchor>
+            <Link 
+              to = 'mySkills' 
+              spy = { true } 
+              smooth = { true } 
+              activeClass = 'active'>Skills</Link>
           </li>
         </ul>
       </Fade>

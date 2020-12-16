@@ -4,7 +4,6 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { IconContext } from 'react-icons';
 
 import HomeView from './views/home';
-import BlogView from './views/blog';
 import Forbidden from './views/403';
 
 import config from '../config.json';
@@ -16,7 +15,6 @@ function App() {
         <Router>
           <Switch>
             <Route exact path = { config.routes.home } component = { () => <HomeView /> } />
-            <Route exact path = { config.routes.blog } component = { () => <BlogView /> } />
             <Route exact path = { config.routes.forbidden } component = { () => <Forbidden /> } />
           </Switch>
         </Router>
