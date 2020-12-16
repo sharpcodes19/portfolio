@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import Landing from '../../components/sections/landing';
 import Contact from '../../components/sections/contact';
 import Works from '../../components/sections/works';
+import Skills from '../../components/sections/skills';
 
 import config from '../../../config.json';
 import axios from 'axios';
@@ -36,6 +37,7 @@ function Home () {
     <div className = 'v-home'>
       
       <Landing />
+      <Skills />
       <Contact />
       <Works />
 

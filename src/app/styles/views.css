@@ -750,6 +750,123 @@ body {
   }
 }
 
+.s-skills {
+  background: #e8eced;
+}
+
+.s-skills .wrapper {
+  max-width: 850px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.s-skills .wrapper .mini-title {
+  color: #343647 !important;
+  opacity: .8;
+}
+
+.s-skills .wrapper .intro {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.s-skills .wrapper .intro .title {
+  margin-top: 3rem;
+  color: #343647 !important;
+}
+
+.s-skills .wrapper .lang {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  margin: 2rem;
+}
+
+.s-skills .wrapper .lang ul {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.s-skills .wrapper .lang ul li {
+  width: 100%;
+  max-width: 72px;
+  display: -ms-grid;
+  display: grid;
+  gap: .5rem;
+  -ms-grid-columns: (72px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 72px);
+  -ms-grid-rows: 72px;
+      grid-template-rows: 72px;
+}
+
+.s-skills .wrapper .lang ul li.html .icon {
+  color: #e34f26;
+}
+
+.s-skills .wrapper .lang ul li.css .icon {
+  color: #2965f1;
+}
+
+.s-skills .wrapper .lang ul li.js .icon {
+  color: #323330;
+}
+
+.s-skills .wrapper .lang ul li.java .icon {
+  color: #5382a1;
+}
+
+.s-skills .wrapper .lang ul li.mongodb .icon {
+  color: #4db33d;
+}
+
+.s-skills .wrapper .lang ul li.mariadb .icon {
+  color: #002e41;
+}
+
+.s-skills .wrapper .lang ul li.mysql .icon {
+  color: #00758F;
+}
+
+.s-skills .wrapper .lang ul li .icon {
+  font-size: 1.5rem;
+}
+
+.s-skills .wrapper .lang ul li img {
+  width: 24px;
+  height: auto;
+  pointer-events: none;
+}
+
+.s-skills .wrapper .lang ul li p {
+  margin: auto;
+  font-weight: 700;
+  color: #343647;
+  font-size: .85rem;
+  font-family: "Raleway", sans-serif;
+}
+
 .v-home {
   background: #343647;
 }

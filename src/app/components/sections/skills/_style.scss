@@ -1,0 +1,70 @@
+.s-skills {
+  background: $light;
+
+  .wrapper {
+    max-width: 850px;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .mini-title {
+      color: $dark !important;
+      opacity: .8;
+    }
+    .intro {
+      margin-bottom: 3rem;
+      width: 100%;
+      .title {
+        margin-top: 3rem;
+        color: $dark !important;
+      }
+    }
+    .lang {
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+      margin: 2rem;
+      ul {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 2rem;
+        li {
+          width: 100%;
+          max-width: 72px;
+          display: grid;
+          gap: .5rem;
+          grid-template-columns: repeat(auto-fit, 72px);
+          grid-template-rows: 72px;
+          &.html { .icon { color: #e34f26; } }
+          &.css { .icon { color: #2965f1; } }
+          &.js { .icon { color: #323330; } }
+          &.java { .icon { color: #5382a1; } }
+          &.mongodb { .icon { color: #4db33d; } }
+          &.mariadb { .icon { color: #002e41; } }
+          &.mysql { .icon { color: #00758F; } }
+          .icon {
+            font-size: 1.5rem;
+          }
+          img {
+            width: 24px;
+            height: auto;
+            pointer-events: none;
+          }
+          p {
+            margin: auto;
+            font-weight: 700;
+            color: $dark;
+            font-size: .85rem;
+            font-family: $head;
+          }
+        }
+      }
+    }
+  }
+}

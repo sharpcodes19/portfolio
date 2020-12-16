@@ -15,9 +15,13 @@ app.use (cors);
 app.use (ua);
 app.use (ip.mw ());
 app.use (routes);
-app.use (express.static ('build'));
 
-mongoose.connect (process.env.ONLINE.toLowerCase () === 'true' ? process.env.DBURL : 'mongodb://127.0.0.1:27017/portfolio', {
+const workOnline = process.env.ONLINE.toLowerCase () === 'true';
+if (workOnline) {
+  app.use (express.static ('build'));
+}
+
+mongoose.connect (workOnline ? process.env.DBURL : 'mongodb://127.0.0.1:27017/portfolio', {
   useFindAndModify: false,
   useCreateIndex: true,
   useNewUrlParser: true,

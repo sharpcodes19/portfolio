@@ -1,6 +1,6 @@
 {
   "server": {
-    "baseUrl": "http://localhost:5423"
+    "baseUrl": "http://localhost:9000"
   },
   "security": {
     "google": {
@@ -50,6 +50,23 @@
     "photoUrl": null,
     "name": {
       "brand": "Sharpcodes"
+    },
+    "skills": {
+      "web": [
+        { "name": "HTML", "value": 80 },
+        { "name": "CSS", "value": 70 },
+        { "name": "JS", "value": 85 }
+      ],
+      "jsfw": [
+        { "name": "ReactJS", "value": 95 },
+        { "name": "ExpressJS", "value": 80 },
+        { "name": "NodeJS", "value": 75 }
+      ],
+      "db": [
+        { "name": "MongoDb", "value": "85" },
+        { "name": "MariaDb", "value": "90" },
+        { "name": "MySQL", "value": "90" }
+      ]
     }
   }
 }

@@ -66,7 +66,7 @@ function UnderConstruction () {
       <form method = 'POST' className = 'subscribe' onSubmit = { onSubscribe }>
 
         <div className = 'notice'>
-          <p>Let know if this section is done.</p>
+          <p>Let me know if this section is done.</p>
         </div>
 
         <div className = 'control'>
