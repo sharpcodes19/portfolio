@@ -17,17 +17,17 @@ function Navigation () {
           </li>
           <li>
             <Link 
-              to = 'myWorks' 
-              spy = { true } 
-              smooth = { true } 
-              activeClass = 'active'>Works</Link>
-          </li>
-          <li>
-            <Link 
               to = 'mySkills' 
               spy = { true } 
               smooth = { true } 
               activeClass = 'active'>Skills</Link>
+          </li>
+          <li>
+            <Link 
+              to = 'myWorks' 
+              spy = { true } 
+              smooth = { true } 
+              activeClass = 'active'>Works</Link>
           </li>
         </ul>
       </Fade>

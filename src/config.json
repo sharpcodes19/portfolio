@@ -1,6 +1,6 @@
 {
   "server": {
-    "baseUrl": "http://localhost:9000"
+    "baseUrl": "https://sharpcodes.herokuapp.com"
   },
   "security": {
     "google": {
