@@ -1,0 +1,28 @@
+.tag-line {
+  text-align: right;
+  padding: 0 2rem;
+
+  .title {
+    font-weight: 700 !important;
+    margin: .5rem 0 1rem 0;
+  }
+
+  .sub-title {
+    span {
+      color: $light;
+      font-size: .9rem;
+      margin-left: .3rem;
+    }
+  }
+
+  .mern {
+    display: grid;
+    grid-template-columns: repeat(4, 24px);
+    gap: 1rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}

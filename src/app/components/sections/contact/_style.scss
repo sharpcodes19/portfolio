@@ -1,0 +1,38 @@
+.s-contact {
+  background: $darker;
+  min-height: 100vh;  
+  
+  .wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .contact-form {
+      margin: 3rem 0;
+    }
+
+    @media (min-width: 575px) {
+      display: grid;
+      grid-template-columns: 1fr .5fr;
+      grid-template-areas: 
+        'tagline specs'
+        'form specs'
+      ;
+      gap: 3rem;
+      .tag-line {
+        grid-area: tagline;
+      }
+      .contact-form {
+        grid-area: form;
+      }
+      .specs {
+        grid-area: specs;
+      }
+    }
+
+  }
+
+  @import './form/style';
+  @import './tag-line/style';
+  @import './specifications/style';
+}

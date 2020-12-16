@@ -1,0 +1,29 @@
+.v-forbidden {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  background: $light;
+  .message {
+    margin: auto;
+    z-index: 2;
+    h1 {
+      color: $darker;
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    p {
+      text-align: center;
+      padding: 0 2rem;
+    }
+  }
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 512px;
+    opacity: .3;
+  }
+}

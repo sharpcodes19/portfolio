@@ -1,0 +1,90 @@
+.under-construction {
+  position: relative;
+  display: grid;
+  padding: 2rem;
+  min-height: 100vh;
+  background: $light;
+
+  grid-template-areas:
+    'message'
+    'subscribe'
+  ;
+
+  img {
+    opacity: .2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 512px;
+    width: 90%;
+    height: auto;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+
+  .message {
+    grid-area: message;
+    z-index: 2;
+    margin: auto;
+    text-align: center;
+
+    h1 {
+      color: $darker;
+      font-weight: 700;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .subscribe {
+    grid-area: subscribe;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateX(-50%);
+    
+    max-width: 360px;
+    width: 100%;
+
+    .notice {
+      font-size: .7rem;
+    }
+
+    .control {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      .c-text {
+        border: 1px solid $darker;
+        width: 100%;
+        input {
+          color: $darker;
+        }
+      }
+      .submit {
+        padding: .5rem 1rem;
+        border: none;
+        background: $primary;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: $head;
+      }
+    }
+  }
+
+  @media (min-width: 425px) {
+    .message {
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+}

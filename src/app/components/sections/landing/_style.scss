@@ -1,0 +1,84 @@
+.s-landing {
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 80vh;
+  padding-bottom: 2rem;
+
+  @import './cv/style';
+  @import './tag-line/style';
+  @import './dev/style';
+
+  // .c-nav {}
+
+  .tag-line {
+    margin: 5rem auto;
+  }
+
+  .cv-dl {
+    margin-bottom: 2rem;
+  }
+
+  .dev { 
+    display: none;
+  }
+
+  @media (min-width: 425px) {
+    .c-nav {
+      grid-area: navi;
+    }
+  
+    .tag-line {
+      grid-area: tag;
+      margin: 0;
+    }
+  
+    .cv-dl {
+      grid-area: cv;
+      margin-bottom: 2rem;
+    }
+  
+    .social-media {
+      grid-area: sm;
+    }
+
+    .dev {
+      display: initial;
+      margin: 2rem 0;
+      grid-area: dev;
+    }
+
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'navi' 'tag' 'dev' 'cv' 'sm';
+  }
+
+  @media (min-width: 575px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      'navi .'
+      'tag tag'
+      'dev sm'
+      'dev cv'
+    ;
+    .tag-line {
+      margin: 4rem 0;
+    }
+    .cv-dl {
+      margin: auto;
+    }
+    .social-media {
+      margin-top: auto;
+    }
+    .dev {
+      margin: 0 0 auto 0;
+      .wave {
+        width: 164px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    min-height: 80vh;
+  }
+}

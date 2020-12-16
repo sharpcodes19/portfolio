@@ -1,0 +1,28 @@
+.cv-dl {
+  text-align: center;
+  .btn {
+    padding: .7rem 3rem;
+    margin-bottom: .3rem;
+    font-weight: 700;
+    font-family: $head;
+    border: 2px solid $primary;
+    background: $primary;
+    color: $darker;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    &:hover {
+      color: $primary;
+      background: transparent;
+    }
+  }
+  p {
+    font-size: 10px !important;
+    span {
+      margin-right: .3rem;
+      color: $light;
+    }
+    a {
+      font-weight: 600 !important;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.b-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .top {
+    padding: 2rem;
+    text-align: center;
+    h1 {
+      color: $darker;
+    }
+    span {
+      color: $dark;
+      opacity: .8;
+    }
+  }
+  .mid {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: $dark;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        a {
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+}

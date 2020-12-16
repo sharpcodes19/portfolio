@@ -1,0 +1,21 @@
+.c-text {
+  border: 1px solid rgba($light, .7);
+  // &.focused {}
+
+  input, textarea {
+    color: $light;
+    font-family: $head;
+    background: transparent;
+    border: none;
+    width: 100%;
+
+    padding: .7rem 1rem;
+    box-shadow: none;
+  }
+
+  textarea {
+    font-size: 13px;
+    resize: none;
+  }
+
+}

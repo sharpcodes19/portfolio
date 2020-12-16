@@ -1,0 +1,25 @@
+.social-media {
+  overflow: hidden;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      width: 32px;
+      height: 32px;
+      &:not(:last-of-type) {
+        margin-right: 1.5rem;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        &:hover {
+          color: $light;
+        }
+      }
+    }
+  }
+}

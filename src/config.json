@@ -1,0 +1,55 @@
+{
+  "server": {
+    "baseUrl": "http://localhost:5423"
+  },
+  "security": {
+    "google": {
+      "recaptcha": {
+        "reCaptchaKey": "6LeiAQMaAAAAAMuG_y66QDln8-flQtoAHJUFP_RV",
+        "language": "en",
+        "useRecaptchaNet": true,
+        "scriptProps": {
+          "async": false,
+          "defer": false,
+          "appendTo": "head"
+        }
+      },
+      "login": {
+        "clientId": "355753082658-d9id8d722qacvsiq554j11n7is3le1kl.apps.googleusercontent.com",
+        "cookiePolicy": "single_host_origin"
+      }
+    }
+  },
+  "icon": {
+    "className": "icon"
+  },
+  "routes": {
+    "home": "/",
+    "blog": "/blog",
+    "forbidden": "/403"
+  },
+  "components": {
+    "socialMedia": [
+      {
+        "name": "fb",
+        "links": {
+          "mobile": "fb://profile/100006063455194",
+          "desktop": "https://www.facebook.com/100006063455194"
+        }
+      },
+      {
+        "name": "tw",
+        "links": {
+          "mobile": "twitter://user?user_id=1305394652980285440",
+          "desktop": "https://www.twitter.com/JarabeJae"
+        }
+      }
+    ]
+  },
+  "dev": {
+    "photoUrl": null,
+    "name": {
+      "brand": "Sharpcodes"
+    }
+  }
+}

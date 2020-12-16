@@ -1,0 +1,31 @@
+.c-nav {
+  padding: 2rem;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    li {
+      a {
+        position: relative;
+        padding: 1rem;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 1px;
+          background: $primary;
+          transform: translate(-50%, 0);
+          transition: width 500ms ease-in-out;
+        }
+        &:hover {
+          &::before {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}
