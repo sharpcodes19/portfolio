@@ -17,6 +17,11 @@ const schema = new mongoose.Schema ({
     type: Date,
     default: new Date (),
     required: true
+  },
+
+  content: {
+    subject: String,
+    message: String
   }
 
 })

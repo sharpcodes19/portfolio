@@ -8,18 +8,16 @@ module.exports = (req, res, next) => {
       dateAdded: -1
     }
   }, (err, entry) => {
-    const now = moment (req.body.date);
     if (err) {
-      console.error (`${ now.format (process.env.DTF_LOG) } Error while finding previous messages of the visitor.`, err);
+      console.error (`${ moment ().format (process.env.DTF_LOG) } Error while finding previous messages of the visitor.`, err);
       return res.sendStatus (500);
     }
     if (!entry) {
       return next ();
     }
     const addedAt = moment (entry.dateAdded);
-    const diff = now.diff (addedAt, 'hours');
-    const canSend = diff >= parseInt (process.env.HOURS_BEFORE_CLIENT_CAN_RESEND_EMAIL);
-    console.log (canSend)
+    const diff = moment ().diff (addedAt, 'hours', true);
+    const canSend = diff >= parseInt (process.env.HOURS_BEFORE_CLIENT_CAN_RESEND_EMAIL.trim ());
     if (!canSend) {
       return res.send ({
         success: false,

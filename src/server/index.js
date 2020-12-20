@@ -3,7 +3,7 @@ const cors        = require ('cors') ();
 const bodyParser  = require ('body-parser');
 const moment      = require ('moment');
 const ua          = require ('express-useragent').express ();
-const ip          = require ('request-ip');
+const ip          = require ('request-ip').mw ();
 const mongoose    = require ('mongoose');
 const routes      = require ('./routes');
 const express     = require ('express');
@@ -13,15 +13,12 @@ app.use (bodyParser.json ());
 app.use (bodyParser.urlencoded ({ extended: true }));
 app.use (cors);
 app.use (ua);
-app.use (ip.mw ());
+app.use (ip);
 app.use (routes);
+app.use (express.static ('build'));
 
-const workOnline = process.env.ONLINE.toLowerCase () === 'true';
-if (workOnline) {
-  app.use (express.static ('build'));
-}
 
-mongoose.connect (workOnline ? process.env.DBURL : 'mongodb://127.0.0.1:27017/portfolio', {
+mongoose.connect (process.env.DBURL, {
   useFindAndModify: false,
   useCreateIndex: true,
   useNewUrlParser: true,
