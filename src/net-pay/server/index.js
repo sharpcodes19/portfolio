@@ -23,12 +23,12 @@ app.use (cors ())
 
 app.use ('/a', Account)
 app.use ('/t', Transaction)
-app.use (express.static ('public'));
+app.use (express.static ('build'));
 
 app.listen (port, async () => {
   console.log (`${ moment ().format (process.env.DTF) } Server established at port ${ port }`)
 
-  const url = 'mongodb://localhost:27017/net-pay'
+  const url = 'mongodb+srv://admin-sharpcodes-portfolio:sharpcodesmongodbpwd@cluster0.p9os8.mongodb.net/net-pay?retryWrites=true&w=majority'
   await mongoose.connect (url, {
     useCreateIndex:       true,
     useUnifiedTopology:   true,

@@ -5,7 +5,6 @@ import moment from 'moment'
 
 import Colors from '../../../Colors.json'
 import Server from '../../Server.json'
-import Entries from './Entries'
 
 const ColorScheme = Colors.netpay
 
@@ -61,7 +60,8 @@ function History(props) {
   const history = useHistory ()
 
   useEffect(() => {
-    Entries.paginateEntries (Server, history, props.pageNumber)
+    const pe = require ('./paginate-entries')
+    pe.paginateEntries (Server, history, props.pageNumber)
     .then ((data) => {
       setEntries (data)
     })
