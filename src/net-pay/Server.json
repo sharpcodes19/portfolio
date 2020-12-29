@@ -1,0 +1,6 @@
+{
+  "url": "http://localhost:9000",
+  "storage": {
+    "authToken": "netpay.auth"
+  }
+}
